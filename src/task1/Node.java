@@ -1,7 +1,7 @@
 package task1;
 
 public class Node {
-    private String value;
+    public String value;
     Node next;
 
     public Node (String data){

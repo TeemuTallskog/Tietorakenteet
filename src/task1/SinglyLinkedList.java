@@ -1,8 +1,5 @@
 package task1;
 
-import java.util.LinkedList;
-import java.util.List;
-
 public class SinglyLinkedList {
 
     private Node currentPOS = null;
@@ -89,4 +86,35 @@ public class SinglyLinkedList {
         currentPOS = tail;
     }
 
+    public void pop(){
+        if(head == null){
+            System.out.println("Queue is empty!");
+            return;
+        }
+        head = head.next;
+    }
+
+    public void add(String value){
+        Node node = new Node(value);
+        if(head == null){
+            head = node;
+            tail = node;
+        }else{
+            tail.next = node;
+            tail = node;
+        }
+    }
+
+    public void display(){
+       if(head == null){
+           System.out.println("Jono on tyhjä!");
+       }else{
+           Node temp = head;
+           while(temp != null){
+               System.out.print(temp.value + ", ");
+               temp = temp.next;
+           }
+           System.out.print("\n");
+       }
+    }
 }
