@@ -2,19 +2,23 @@ package Suunnittelumallit.Composite;
 
 public class Main {
     public static void main(String[] args){
-        Computer computer = new Computer("Home PC");
-        Component motherboard = new Motherboard();
+        Case aCase = new Case();
+        Motherboard motherboard = new Motherboard();
         Component ram = new Ram();
         Component networkAdapter = new NetworkAdapter();
         Component processor = new Processor();
+        Component gpu = new Gpu();
 
-        computer.addComponent(motherboard);
-        computer.addComponent(ram);
-        computer.addComponent(networkAdapter);
-        computer.addComponent(processor);
+        motherboard.addComponent(gpu);
+        motherboard.addComponent(processor);
+        motherboard.addComponent(networkAdapter);
+        motherboard.addComponent(ram);
 
-        System.out.println("Price of the pc = " + computer.getPrice());
-        computer.printReceipt();
+        aCase.addComponent(motherboard);
+
+        System.out.println("Computer parts: ");
+        aCase.printReceipt();
+        System.out.println("Total price = " + aCase.getPrice() + "€");
 
     }
 }

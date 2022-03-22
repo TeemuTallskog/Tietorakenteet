@@ -3,14 +3,14 @@ package Suunnittelumallit.Composite;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Computer implements Component{
-    private double price = 0;
-    private String name;
+public class Case implements Component{
+    private double individualPrice = 89.99;
+    private double price = 89.99;
+    private String name = "NZXT H510 - CA-H510B-B1 - Compact ATX Mid-Tower PC Gaming Case";
 
     private List<Component> childComponents;
 
-    public Computer(String name){
-        this.name = name;
+    public Case(){
         this.childComponents = new ArrayList<>();
     }
 
@@ -26,11 +26,8 @@ public class Computer implements Component{
 
     @Override
     public void printReceipt() {
-        System.out.println(name + "'s Components:");
-        this.childComponents.forEach(component -> {
-            component.printReceipt();
-        });
-        System.out.println("Total: " + price + "€");
+        this.childComponents.forEach(Component::printReceipt);
+        System.out.println(name + ", " + individualPrice + "€");
     }
 
     public void addComponent(Component component){
