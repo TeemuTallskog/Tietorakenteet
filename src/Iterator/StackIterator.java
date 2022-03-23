@@ -20,25 +20,18 @@ public class StackIterator implements Iterator {
 
     StackIterator (Stack c) { // konstruktori on "package visible"
         container = c;
-        current = container.top;
+        current = 0;
     }
     // palautetaan tieto siitä, löytyyko rakenteesta seuraava alkio
     // hmm... palautetaan tieto siitä, osoittaako nykypositio (current) alkiota vai ei.
+    @Override
     public boolean hasNext() {
-        if(container.taulu[current+1] == null){
-            return false;
-        }else return true;
+        return container.taulu[current] != null;
     }
     // palautetaan nykyinen (lista-alkio) ja siirretään nykypositiota pykälä eteenpäin
+    @Override
     public String next() {
-        String old;
-        if(hasNext()){
-            old = container.taulu[current];
-            current += 1;
-        }else{
-            old = container.taulu[current];
-        }
-        return old;
+        return container.taulu[current++];
     }
 
 }

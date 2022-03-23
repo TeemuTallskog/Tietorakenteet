@@ -38,8 +38,12 @@ public class Stack {
         public String pop() {
                 String takeAway;
                 if(top == 0){
-                        System.out.println("Stack is empty!");
-                        return null;
+                        if(taulu[top] == null){
+                                System.out.println("Stack is empty!");
+                                return null;
+                        }
+                        takeAway = taulu[top];
+                        taulu[top] = null;
                 }else{
                         takeAway = taulu[top];
                         taulu[top] = null;

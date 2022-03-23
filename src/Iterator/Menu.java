@@ -39,11 +39,11 @@ public class Menu {
                             s.push(data);
                             break;
                         case '2':
-                            ListItem item = s.pop();
+                            String item = s.pop();
                             if (item == null)
                                 System.out.println("Pino on tyhjä");
                             else
-                                System.out.println("Poistettu alkio: "+item.getData());
+                                System.out.println("Poistettu alkio: "+item);
                             break;
                         case '3':
                             s.printItems();
@@ -53,8 +53,9 @@ public class Menu {
                             break;
                         case '5':
                             StackIterator itr = s.iterator();
-                            while (itr.hasNext())
-                                System.out.println(itr.next().getData());
+                            while(itr.hasNext()){
+                                System.out.println(itr.next());
+                            }
                             break;
                         case '6':
                             break;

@@ -17,10 +17,10 @@ public class QuickSort {
             }
         }
         System.out.println("\nJärjestellään käyttämällä Quicksorttia, paina Enter");
-        Lue.merkki();
+        //Lue.merkki();
         qs(taulukko, MAX);
         System.out.println("Valmis");
-        System.out.println("Vertailujen lukumäärä: " + laskuri);
+        //System.out.println("Vertailujen lukumäärä: " + laskuri);
     }
 
     public static void quickSort(int table[], int lo0, int hi0) {
