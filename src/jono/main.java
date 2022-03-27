@@ -1,4 +1,4 @@
-package task1;
+package jono;
 
 public class main {
     public static void main(String[] args){

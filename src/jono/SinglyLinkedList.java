@@ -1,4 +1,4 @@
-package task1;
+package jono;
 
 public class SinglyLinkedList {
 
