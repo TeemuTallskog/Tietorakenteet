@@ -1,4 +1,4 @@
-package Suunnittelumallit.Sorting;
+package Sorting;
 
 public class MergeSort {
     private void merge(int arr[], int l, int m, int r)

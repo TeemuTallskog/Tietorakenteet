@@ -1,4 +1,4 @@
-package Suunnittelumallit.Sorting;
+package Sorting;
 
 public class Counter {
     private long count;

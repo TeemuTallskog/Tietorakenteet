@@ -1,4 +1,4 @@
-package Observer;
+package Suunnittelumallit.Observer;
 
 public class ClockTimer extends Subject {
     private int hour;

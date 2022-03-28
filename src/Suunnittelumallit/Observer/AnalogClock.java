@@ -1,4 +1,4 @@
-package Observer;
+package Suunnittelumallit.Observer;
 
 public class AnalogClock implements Observer{
     private ClockTimer timer;

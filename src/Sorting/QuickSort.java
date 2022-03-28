@@ -1,4 +1,4 @@
-package Suunnittelumallit.Sorting;
+package Sorting;
 
 import java.util.Random;
 

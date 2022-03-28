@@ -1,4 +1,4 @@
-package Observer;
+package Suunnittelumallit.Observer;
 
 public class main {
     public static void main(String[] args){

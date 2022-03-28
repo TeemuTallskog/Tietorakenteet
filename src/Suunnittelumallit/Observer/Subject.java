@@ -1,4 +1,4 @@
-package Observer;
+package Suunnittelumallit.Observer;
 
 import java.util.HashSet;
 import java.util.Set;

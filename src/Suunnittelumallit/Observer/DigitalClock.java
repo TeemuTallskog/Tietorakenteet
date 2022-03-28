@@ -1,4 +1,4 @@
-package Observer;
+package Suunnittelumallit.Observer;
 
 public class DigitalClock implements Observer {
     private ClockTimer timer;

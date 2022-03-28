@@ -1,4 +1,4 @@
-package Suunnittelumallit.Sorting;
+package Sorting;
 
 public class SelectSort {
     public static void selectSort(int[] arr){
