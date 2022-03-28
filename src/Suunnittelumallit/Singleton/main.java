@@ -1,9 +1,8 @@
-package Singleton;
+package Suunnittelumallit.Singleton;
 
 public class main {
 
     public static void main(String[] args){
-        BankAccount familyBankAccount = BankAccount.getInstance();
 
         Person dad = new Person(1200, "Dad");
         Person mom = new Person(1500, "Mom");

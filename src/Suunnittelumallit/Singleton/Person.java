@@ -1,4 +1,4 @@
-package Singleton;
+package Suunnittelumallit.Singleton;
 
 public class Person {
     private int wallet;
