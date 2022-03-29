@@ -17,7 +17,7 @@ public class Stack {
         String[] taulu = new String[MAX];
 
         public Stack() {
-                top = 0;
+                top =  -1;
                 size = 0;
         }
         //  palautetaan pino-iteraattori
@@ -29,21 +29,17 @@ public class Stack {
                 if(top == 9){
                         System.out.println("Stack overflow");
                 }else{
+                        top += 1;
                         taulu[top] = aData;
-                        top +=1;
                 }
 
         }
         // poistetaan alkio pinon huipulta, jos pinossa ei alkioita palautetaan null
         public String pop() {
                 String takeAway;
-                if(top == 0){
-                        if(taulu[top] == null){
-                                System.out.println("Stack is empty!");
-                                return null;
-                        }
-                        takeAway = taulu[top];
-                        taulu[top] = null;
+                if(top == -1){
+                        System.out.println("Stack is empty!");
+                        return null;
                 }else{
                         takeAway = taulu[top];
                         taulu[top] = null;
@@ -60,7 +56,7 @@ public class Stack {
         // listataan sisältö
         public void printItems() {
                 int pointer = top;
-                while(pointer != 0){
+                while(pointer != -1){
                         System.out.println(taulu[pointer]);
                         pointer -= 1;
                 }
