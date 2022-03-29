@@ -61,6 +61,7 @@ public class EncryptionDecorator extends DataDecorator{
                     byte[] bytestr = str.getBytes(StandardCharsets.ISO_8859_1);
                     temp.add(new String(cipher.doFinal(bytestr)));
                 } catch (IllegalBlockSizeException | BadPaddingException ignored) {
+                    temp.add(str);
                 }
             });
         }catch (Exception e){

@@ -11,7 +11,6 @@ public class PersonalStorage implements Storage{
     @Override
     public void writeData(String data) {
         dataList.add(data);
-        System.out.println(data);
     }
 
     @Override

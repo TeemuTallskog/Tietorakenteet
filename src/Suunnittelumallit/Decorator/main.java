@@ -38,6 +38,8 @@ public class main {
                     ArrayList<String> elist = encryptedStorage.readData();
                     if(elist != null){
                         elist.forEach(System.out::println);
+                    }else{
+                        System.out.println("nothing here");
                     }
                     break;
                 case 5:
