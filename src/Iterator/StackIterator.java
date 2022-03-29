@@ -5,6 +5,9 @@
  */
 package Iterator;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author kamaj
@@ -16,19 +19,16 @@ interface Iterator {
 
 public class StackIterator implements Iterator {
     private int  current;
-    private Stack container; // container on tietorakenne, jota iteroidaan
+    private Stack container;
 
-    StackIterator (Stack c) { // konstruktori on "package visible"
+    StackIterator (Stack c) {
         container = c;
         current = 0;
     }
-    // palautetaan tieto siitä, löytyyko rakenteesta seuraava alkio
-    // hmm... palautetaan tieto siitä, osoittaako nykypositio (current) alkiota vai ei.
     @Override
     public boolean hasNext() {
         return container.taulu[current] != null;
     }
-    // palautetaan nykyinen (lista-alkio) ja siirretään nykypositiota pykälä eteenpäin
     @Override
     public String next() {
         return container.taulu[current++];
