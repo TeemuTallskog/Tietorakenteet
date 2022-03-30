@@ -1,10 +1,12 @@
 package Suunnittelumallit.Decorator;
 
+import Suunnittelumallit.Decorator.Storage;
+
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class PersonalStorage implements Storage{
+public class PersonalStorage implements Storage {
 
     private ArrayList<String> dataList = new ArrayList<String>();
 
