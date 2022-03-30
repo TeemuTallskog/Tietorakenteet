@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args){
         Storage storage = new PersonalStorage();
-        Storage encryptedStorage = new EncryptionDecorator(new PersonalStorage());
+        Storage encryptedStorage = new EncryptionDecorator(storage);
 
         boolean loop = true;
         Scanner s = new Scanner(System.in);
