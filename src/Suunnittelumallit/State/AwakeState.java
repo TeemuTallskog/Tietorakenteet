@@ -20,6 +20,7 @@ public class AwakeState extends CharacterState{
             TimeUnit.SECONDS.sleep(1);
         }catch (Exception ignored){}
         System.out.println("After exercising joe falls to tired state.");
+        joe.changeState(TiredState.getInstance());
     }
 
     public void sleep(Joe joe){
