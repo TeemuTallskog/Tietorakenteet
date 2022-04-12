@@ -1,5 +1,6 @@
 package BinaryTree;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -15,6 +16,27 @@ public class Binarytree {
 
     public Node getRoot(){
         return root;
+    }
+
+    public void createTree(Integer[] list){
+        System.out.println(Arrays.toString(list));
+        this.root = new Node(list[0]);
+
+        for(int i = 1; i<list.length; i++){
+            extendTree(root, list[i]);
+        }
+    }
+
+    private void extendTree(Node node, int i){
+        if(node.left == null && i <= node.value){
+            node.setLeft(new Node(i));
+        }else if(node.right == null && i >= node.value){
+            node.setRight(new Node(i));
+        }else if(i <= node.value){
+            extendTree(node.left, i);
+        }else{
+            extendTree(node.right, i);
+        }
     }
 
     public void createRandomTree(Node root,int chance, float multiplier, int depth, int maxDepth){

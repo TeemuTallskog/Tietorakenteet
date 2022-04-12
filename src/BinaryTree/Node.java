@@ -8,7 +8,7 @@ public class Node {
     Node(int value){
         this.value = value;
     }
-    void setLeft(Node node){
+    void setLeft(Node left){
         this.left = left;
     }
     void setRight(Node right){

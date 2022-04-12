@@ -14,10 +14,8 @@ public class Client extends Thread {
     }
     public void run(){
         Object memento = guesser.joinGame();
-        boolean runCondition = true;
-        while(runCondition){
+        while(!guesser.guess(memento, (int) (Math.random() * 20))){
             attempts++;
-            if(guesser.guess(memento, (int) (Math.random() * 20))) runCondition = false;
         }
         System.out.println(this.name + " Guessed right after " + attempts + " attempts!");
     }

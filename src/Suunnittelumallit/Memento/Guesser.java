@@ -4,8 +4,8 @@ import java.util.HashMap;
 
 public class Guesser {
 
-    private class Memento{
-        private int random;
+    private static class Memento{
+        private final int random;
 
         public Memento(){
             this.random = (int) (Math.random() * 20);
