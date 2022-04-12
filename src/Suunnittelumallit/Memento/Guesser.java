@@ -7,7 +7,7 @@ public class Guesser {
     private static class Memento{
         private final int random;
 
-        public Memento(){
+        private Memento(){
             this.random = (int) (Math.random() * 20);
         }
     }
