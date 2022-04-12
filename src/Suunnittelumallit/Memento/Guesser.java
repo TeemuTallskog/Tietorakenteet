@@ -4,10 +4,10 @@ import java.util.HashMap;
 
 public class Guesser {
 
-    private class Memento{
-        private int random;
+    private static class Memento{
+        private final int random;
 
-        public Memento(){
+        private Memento(){
             this.random = (int) (Math.random() * 20);
         }
     }
@@ -18,10 +18,6 @@ public class Guesser {
     }
 
     public boolean guess(Object memento, int guess){
-        if(memento.getClass() != Memento.class) return false;
-        Memento mem = (Memento) memento;
-        if(mem.random == guess){
-            return true;
-        }else return false;
+        return (((Memento) memento).random == guess);
     }
 }
