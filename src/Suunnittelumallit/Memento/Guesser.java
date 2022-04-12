@@ -18,10 +18,6 @@ public class Guesser {
     }
 
     public boolean guess(Object memento, int guess){
-        if(memento.getClass() != Memento.class) return false;
-        Memento mem = (Memento) memento;
-        if(mem.random == guess){
-            return true;
-        }else return false;
+        return (((Memento) memento).random == guess);
     }
 }
