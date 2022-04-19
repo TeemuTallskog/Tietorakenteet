@@ -24,14 +24,37 @@ public class main {
         Collections.shuffle(integerList);
 
         integerList.toArray(list);
-         */
-        int[] list = {20,4,2,1,13,44,9,10,22,30,60};
+
+        int[] list = {20,4,2,1,13,44,9,10,22,21,30,60};
         tree.createTree(list);
         BinaryTreePrinter.print(tree.getRoot());
-        tree.contains(13);
-        tree.contains(8);
-        tree.contains(22);
-        tree.contains(24);
-        tree.contains(1);
+        System.out.println("Deleting 13");
+        tree.deleteRoot(13);
+        BinaryTreePrinter.print(tree.getRoot());
+        System.out.println("Deleting 22");
+        tree.deleteRoot(22);
+        BinaryTreePrinter.print(tree.getRoot());
+        System.out.println("Deleting 1");
+        tree.deleteRoot(1);
+        BinaryTreePrinter.print(tree.getRoot());
+
+         */
+
+        int[] list = {20,4,2,1,13,44,9,10,22,21,30, 27, 37,60};
+        tree.createTree(list);
+        BinaryTreePrinter.print(tree.getRoot());
+        tree.subTreeDepth(20);
+        tree.subTreeDepth(44);
+        tree.subTreeDepth(13);
+        tree.subTreeDepth(30);
+        tree.subTreeDepth(21);
+        System.out.println("Adding 40");
+        tree.append(40);
+        BinaryTreePrinter.print(tree.getRoot());
+        tree.subTreeDepth(20);
+        tree.subTreeDepth(44);
+        tree.subTreeDepth(13);
+        tree.subTreeDepth(30);
+        tree.subTreeDepth(21);
     }
 }
