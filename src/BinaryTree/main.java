@@ -40,6 +40,7 @@ public class main {
 
          */
 
+        /*
         int[] list = {20,4,2,1,13,44,9,10,22,21,30, 27, 37,60};
         tree.createTree(list);
         BinaryTreePrinter.print(tree.getRoot());
@@ -56,5 +57,17 @@ public class main {
         tree.subTreeDepth(13);
         tree.subTreeDepth(30);
         tree.subTreeDepth(21);
+
+         */
+
+        int[] list = {20,4,2,1,13,44,9,10,22,21,30, 27, 37,60};
+        tree.createTree(list);
+        BinaryTreePrinter.print(tree.getRoot());
+        tree.search(1);
+        tree.search(60);
+        tree.search(22);
+        tree.search(4);
+        tree.search(19);
+        tree.search(42);
     }
 }

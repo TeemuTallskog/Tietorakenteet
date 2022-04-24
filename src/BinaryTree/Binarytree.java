@@ -41,6 +41,23 @@ public class Binarytree {
         }
     }
 
+    public void search(int i){
+        if(binarySearch(root, i)) System.out.println(i + ". was found.");
+        else System.out.println("No value matching " + i + ". was found.");
+    }
+
+    private boolean binarySearch(Node node, int i){
+        if(i == node.value) return true;
+        if(i < node.value) {
+            if(node.left == null) return false;
+            if(binarySearch(node.left, i)) return true;
+        }else {
+            if(node.right == null) return false;
+            if(binarySearch(node.right, i)) return true;
+        }
+        return false;
+    }
+
     public void append(int i){
         extendTree(root, i, 0);
     }
@@ -85,8 +102,7 @@ public class Binarytree {
                 right = findNode(node.right, i);
             }
             if(left != null) return left;
-            if(right != null) return right;
-            else return null;
+            return right;
         }
     }
 
@@ -99,8 +115,7 @@ public class Binarytree {
         if(node.right != null){
             right = findMaxDepth(node.right, depth + 1);
         }
-        if(left > right)return left;
-        else return right;
+        return Math.max(left, right);
     }
 
     public void createRandomTree(Node root,int chance, float multiplier, int depth, int maxDepth){
@@ -137,7 +152,7 @@ public class Binarytree {
                 if(containsCheck(root.left, i)) return true;
             }
             if(root.right != null){
-                if(containsCheck(root.right, i)) return true;
+                return containsCheck(root.right, i);
             }
             return false;
         }
