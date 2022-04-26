@@ -5,7 +5,6 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 public class FlyWeightTest {
-    public class StringTest {
         public static void main(String[] args) {
             String fly = "fly", weight = "weight";
             String fly2 = "fly", weight2 = "weight";
@@ -19,4 +18,3 @@ public class FlyWeightTest {
             System.out.println(flyweight == "flyweight"); // The intern() method returns a flyweight
         }
     }
-}

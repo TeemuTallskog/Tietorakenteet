@@ -24,6 +24,7 @@ public class Main extends Application {
 		    pane.getChildren().add(new Button("Stop"));  
 		    Button reset = new Button("Reset");
 		    reset.setBorder(BorderFactory.INSTANCE.getBorder());
+
 		    pane.getChildren().add(reset);
 		        
 		    pane.getChildren().add(new TextField("Samat kehykset = " + (pane.getBorder()==reset.getBorder())));
