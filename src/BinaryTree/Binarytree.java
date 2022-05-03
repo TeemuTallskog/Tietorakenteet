@@ -18,14 +18,7 @@ public class Binarytree {
         return root;
     }
 
-    public void createTree(int[] list){
-        System.out.println(Arrays.toString(list));
-        this.root = new Node(list[0]);
 
-        for(int i = 1; i<list.length; i++){
-            extendTree(root, list[i], 0);
-        }
-    }
 
     private void extendTree(Node node, int i, int depth){
         if(node.left == null && i <= node.value){
@@ -144,15 +137,27 @@ public class Binarytree {
         else System.out.println("Tree doesn't contain " + i);
     }
 
+    public void createTree(int[] list){
+        System.out.println(Arrays.toString(list));
+        this.root = new Node(list[0]);
+
+        for(int i = 1; i<list.length; i++){
+            if(!containsCheck(root, list[i])) extendTree(root, list[i], 0);
+        }
+    }
+
     private boolean containsCheck(Node root, int i){
         if(root.value == i){
             return true;
         }else{
-            if(root.left != null){
-                if(containsCheck(root.left, i)) return true;
-            }
-            if(root.right != null){
-                return containsCheck(root.right, i);
+            if(i < root.value){
+                if(root.left != null){
+                    if(containsCheck(root.left, i)) return true;
+                }
+            }else{
+                if(root.right != null){
+                    return containsCheck(root.right, i);
+                }
             }
             return false;
         }
