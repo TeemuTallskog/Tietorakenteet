@@ -34,12 +34,19 @@ public class UsingJCAPI {
         while (itr.hasNext()) {
             System.out.println(itr.next());
         }
-        System.out.println("Sorted list:");
-        ArrayList<TrafficCard> cardUsersSorted = cardUsers;
-        Collections.sort(cardUsersSorted);
-        Iterator<TrafficCard> sortedItr = cardUsersSorted.iterator();
+        System.out.println("Sorted based on balance:");
+        TrafficCardBalanceComparator balanceComparator = new TrafficCardBalanceComparator();
+        Collections.sort(cardUsers, balanceComparator);
+        Iterator<TrafficCard> sortedItr = cardUsers.iterator();
         while (sortedItr.hasNext()) {
             System.out.println(sortedItr.next());
+        }
+        System.out.println("Sorted based on Number:");
+        TrafficCardTravellerComparator travellerComparator = new TrafficCardTravellerComparator();
+        Collections.sort(cardUsers, travellerComparator);
+        Iterator<TrafficCard> sortedItr1 = cardUsers.iterator();
+        while (sortedItr1.hasNext()) {
+            System.out.println(sortedItr1.next());
         }
     }
     
